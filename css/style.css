@@ -263,8 +263,8 @@ a.action_container:link {
     margin-bottom: 0;
     margin-top: 0;
     overflow: hidden;
-    text-overflow: ellipsis
-    white-space: nowrap
+    text-overflow: ellipsis;
+    white-space: nowrap;
     font-weight: 400;
     display: block;
 }
@@ -281,14 +281,14 @@ a.action_container:link {
     color: #282c3f;
 }
 .original-price {
+    font-size: 12px;
     text-decoration: line-through;
     color: #7e818c;
     font-weight: 400;
-    margin-left: 5px; I
-    font-size: 12px;
+    margin-left: 5px;
 }
 .discount{
-    color: #ff905a;
+    color:#ff905a;
     font-weight: 400;
     font-size: 12px;
     margin-left: 5px;
