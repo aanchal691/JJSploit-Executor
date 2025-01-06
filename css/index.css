@@ -89,7 +89,7 @@
 header {
     display: flex;
     background-color: #ffffff;
-    height: 80px;
+    height: 82px;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #b6b1b1;
@@ -230,4 +230,76 @@ header {
 }
 a.action_container:link {
     color:black;
+}
+.items-container{
+    width: 80%;
+    margin: 40px 10%;
+}
+.item-container{
+    width: 250px;
+}
+.item-image{
+    width: 100%;
+}
+.rating{
+    font-size: 12px;
+    font-weight: 700;
+}
+.company-name{
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    color: #282c3f;
+    margin-bottom: 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.item-name{
+    color: #535766;
+    font-size: 14px;
+    line-height: 1;
+    margin-bottom: 0;
+    margin-top: 0;
+    overflow: hidden;
+    text-overflow: ellipsis
+    white-space: nowrap
+    font-weight: 400;
+    display: block;
+}
+.price {
+    font-size: 14px;
+    line-height: 15px;
+    color: #282c3f;
+    white-space: nowrap;
+    margin-top: 10px;
+}
+.current-price {
+    font-size: 14px;
+    font-weight: 700;
+    color: #282c3f;
+}
+.original-price {
+    text-decoration: line-through;
+    color: #7e818c;
+    font-weight: 400;
+    margin-left: 5px; I
+    font-size: 12px;
+}
+.discount{
+    color: #ff905a;
+    font-weight: 400;
+    font-size: 12px;
+    margin-left: 5px;
+}
+.btn-add-bag{
+    margin-top: 8px;
+    font-size: 18px;
+    width: 100%;
+    background-color: #91ee8b;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-weight: 500;
 }
