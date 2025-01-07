@@ -1,3 +1,27 @@
+let bagItems = [];
+onLoad();
+function onLoad(){
+    displayItemsOnHomePage();
+    displayBagIcon();
+}
+
+
+function addToBag(itemsId){
+ bagItems.push(itemsId);
+ displayBagIcon();
+}
+function displayBagIcon(){
+    let bagItemCountElement = document.querySelector('.bag-item-count');
+    
+    if(bagItems.length>0){
+        bagItemCountElement.style.visibility="visible";
+        bagItemCountElement.innerText = bagItems.length;
+    }
+    else {
+        bagItemCountElement.style.visibility="hidden";
+    }
+}
+function displayItemsOnHomePage(){
 let itemsContainerElement = document.querySelector('.items-container');
 // let item = {
 //     item_image: 'images/7.jpg',
@@ -12,6 +36,7 @@ let itemsContainerElement = document.querySelector('.items-container');
 //     discount_percentage: 42,
 
 // }
+// On page load items will be displayed with this loop
 let innerHTML = ``;
 items.forEach(item => {
     innerHTML += `<div class="item-container">
@@ -28,7 +53,8 @@ items.forEach(item => {
         <span class="original-price">${item.original_price}</span>
         <span class="discount">(${item.discount_percentage}% OFF)</span>
     </div>
-    <button class="btn-add-bag">Add To Cart</button>
+    <button class="btn-add-bag" onclick="addToBag(${item.id})">Add To Cart</button>
 </div>`
 });
 itemsContainerElement.innerHTML = innerHTML;
+}

@@ -303,4 +303,21 @@ a.action_container:link {
     padding: 5px 15px;
     border-radius: 10px;
     font-weight: 500;
+    cursor:pointer;
+}
+.bag-item-count{
+    background-color: #f16565;
+    white-space: nowrap;
+    text-align: center;
+    line-height: 18px;
+    padding: 0 6px;
+    height: 18px;
+    position: relative;
+    border-radius: 50%;
+    font-size: 12px;
+    color: #fff;
+    left: 13px;
+    top: -44px;
+    font-weight: 700;
+    cursor: pointer;
 }
