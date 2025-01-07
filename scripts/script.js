@@ -1,25 +1,26 @@
 let itemsContainerElement = document.querySelector('.items-container');
-let item = {
-    item_image: 'images/7.jpg',
-    rating: {
-        stars: 4.5,
-        noOfReviews: 1400,
-    },
-    company_name:'Nike',
-    item_name:'Nike Casual Shoes Wh',
-    current_price: 606,
-    original_price: 1045,
-    discount_percentage: 42,
+// let item = {
+//     item_image: 'images/7.jpg',
+//     rating: {
+//         stars: 4.5,
+//         noOfReviews: 1400,
+//     },
+//     company_name:'Nike',
+//     item_name:'Nike Casual Shoes Wh',
+//     current_price: 606,
+//     original_price: 1045,
+//     discount_percentage: 42,
 
-}
-itemsContainerElement.innerHTML = `
-<div class="item-container">
-    <img class="item-image" src="${item.item_image}" alt="item pic">
+// }
+let innerHTML = ``;
+items.forEach(item => {
+    innerHTML += `<div class="item-container">
+    <img class="item-image" src="${item.image}" alt="item pic">
     <div class="rating">
-        ${item.rating.stars} ⭐ | ${item.rating.noOfReviews}k
+        ${item.rating.stars} ⭐ | ${item.rating.count}k
     </div>
     <div class="company-name">
-        ${item.company_name}
+        ${item.company}
     </div>
     <div class="item-name">${item.item_name}</div>
     <div class="price">
@@ -28,4 +29,6 @@ itemsContainerElement.innerHTML = `
         <span class="discount">(${item.discount_percentage}% OFF)</span>
     </div>
     <button class="btn-add-bag">Add To Cart</button>
-</div>`;
+</div>`
+});
+itemsContainerElement.innerHTML = innerHTML;
