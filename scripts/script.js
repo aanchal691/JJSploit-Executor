@@ -5,6 +5,7 @@ function onLoad(){
     bagItems = bagItemsStr ? JSON.parse(bagItemsStr) : [];
     displayItemsOnHomePage();
     displayBagIcon();
+    console.log('here')
 }
 
 
