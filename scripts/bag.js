@@ -16,14 +16,23 @@ function loadBagItemObjects(){
         }
     })
 }
+
 function displayBagItems(){
-let containerElement = document.querySelector('.bag-items-container');
-let innerHTML = '';
-bagItemsObject.forEach(bagItem => {
-    innerHTML += generateItemHTML(bagItem);
-});
-containerElement.innerHTML = innerHTML;
+    let containerElement = document.querySelector('.bag-items-container');
+    let innerHTML = '';
+    bagItemsObject.forEach(bagItem => {
+        innerHTML += generateItemHTML(bagItem);
+    });
+    containerElement.innerHTML = innerHTML;
 }
+
+function removeFromBag(itemId){
+    bagItems = bagItems.filter(bagItemId => bagItemId != itemId);
+    localStorage.setItem('bagItems', JSON.stringify(bagItems));
+    loadBagItemObjects();
+    displayBagItems();
+}
+
 function generateItemHTML(items){
     return `
 
@@ -48,6 +57,6 @@ function generateItemHTML(items){
         </div>
         </div>
 
-        <div class="remove-from-cart">X</div>
+        <div class="remove-from-cart" onclick="removeFromBag(${items.id})">X</div>
     </div>`;
 }
